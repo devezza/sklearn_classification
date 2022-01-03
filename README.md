@@ -3,14 +3,12 @@
 ## Classificação: Porco ou Cachorro?
 Na nossa vida aprendemos muitas vezes através da supervisão de outra pessoa, é dessa forma que esse algortmo irá aprender e identificar os dados.
 
-## Características / Features
-Quanto mais a gente mostrar as características de um determinado animal maiores são as chances de acerto.
+Aqui iremos identificar as seguintes características 1 - sim, 0 - não:
+- pelo longo
+- perna curta
+- faz auau
 
-\
-Aqui iremos identificar as seguintes características:
-- pelo: longo ou curto
-- perna: curta ou longa
-- faz auau: sim ou nao
+## Classificação: Acessos em site
+Nesse exemplo, entendemos como separar o treino e o test de forma mais fácil, além de inserir uma semente fixa para que a acurácia se matenha constante e estratificar os dados para manter a proporção dos dados.
 
-## Quão bom é o nosso estimador?
-Vamos identificar isso através da margem de erro: **ACURÁCIA** utilizando ```from sklearn.metrics import accuracy_score```
+```train_x, test_x, train_y, test_y = train_test_split(x, y, random_state = seed, test_size = 0.25, stratify = y)```
